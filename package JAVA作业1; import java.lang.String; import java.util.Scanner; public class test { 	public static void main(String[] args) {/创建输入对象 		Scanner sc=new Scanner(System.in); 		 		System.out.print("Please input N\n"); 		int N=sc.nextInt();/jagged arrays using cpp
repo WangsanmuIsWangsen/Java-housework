@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<stdlib.h>
+using namespace std;
+int N;   //行列
+int main(void)
+{
+	cin >> N;
+	int **Int;
+	int count = 0;
+	Int = new int*[N];
+	for (int i = 0; i < N; i++)
+	{
+		Int[i] = new int[N - i];
+		for (int j = 0; j < N-i; j++)
+		{
+			int tmp;
+			cin >> tmp;
+			Int[i][j] = tmp;
+			count += Int[i][j];
+		}
+	}
+	cout << count;
+	return 0;
+}
+
