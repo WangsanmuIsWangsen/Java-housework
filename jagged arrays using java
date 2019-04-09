@@ -1,0 +1,26 @@
+package JAVA作业1;
+import java.lang.String;
+import java.util.Scanner;
+public class test {
+	public static void main(String[] args) {
+		//创建输入对象
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("Please input N\n");
+		int N=sc.nextInt();  //得到控制台输入的N
+		int [][]Int;
+		Int=new int[N][];
+		int count=0;
+		for(int i=1;i<=N;i++)
+		{
+			Int[i-1]=new int[N-i+1];   
+			for(int j=1;j<=N+1-i;j++)
+			{
+				Int[i-1][j-1]=sc.nextInt();
+				count+=Int[i-1][j-1];
+			}
+		}
+		
+		System.out.print("和为："+count);
+	}
+}
